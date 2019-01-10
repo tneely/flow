@@ -1,32 +1,94 @@
 .App {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.ani-3 {
+  animation-duration: 3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ani-1-5 {
+  animation-duration: 1.5s;
+}
+
+.ani-1 {
+  animation-duration: 1s;
+}
+
+.ani-0-5 {
+  animation-duration: 0.5s;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.end-flow-link {
+  bottom: 0;
+  margin-bottom: 2rem;
+  position: absolute;
+  text-decoration: underline;
+}
+
+.special {
+  color: #254272;
+  color: var(--accent-color-dark);
+}
+
+.flow-summary {
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100vw;
+}
+
+.flow-div {
+  background-color: #b2cbff;
+  background-color: var(--accent-color-light);
+  border: solid 2px;
+  border-color: #04070c;
+  border-color: var(--bg-color-dark);
+  border-radius: 0.4rem;
+  height: 2rem;
+}
+
+.total-div {
+  background-color: #254272;
+  background-color: var(--accent-color-dark);
+  height: 2.5rem;
+}
+
+.flow-summary-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flow-summary-time-ends {
+  display: flex;
+  justify-content: space-between;
 }
